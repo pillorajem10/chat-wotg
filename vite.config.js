@@ -11,7 +11,7 @@ export default defineConfig({
     base: "/vite/", // Ensure all assets are prefixed with /vite/
     server: {
         host: "0.0.0.0",
-        port: false,
+        port: 3000,
         hmr: {
             host: "chat.wotgonline.com",
             protocol: "wss"

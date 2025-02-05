@@ -13,7 +13,7 @@ export default defineConfig({
         host: "0.0.0.0",
         hmr: {
             clientPort: 443,
-            host: "chat.wotgonline.com",
+            host: "chat.wotgonline.com/vite",
             protocol: "wss"
         }
     },

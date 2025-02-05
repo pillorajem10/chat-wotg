@@ -12,7 +12,7 @@ export default defineConfig({
     server: {
         host: "0.0.0.0",
         hmr: {
-            host: "chat.wotgonline.com",
+            host: "chat.wotgonline.com/vite",
             protocol: "wss"
         }
     },

@@ -4,22 +4,19 @@ import laravel from 'laravel-vite-plugin';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'], // Ensure correct entry files
+            input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
         }),
     ],
-    base: "/vite/", // Ensure all assets are prefixed with /vite/
-    server: {
-        host: "0.0.0.0",
-        hmr: {
-            clientPort: 443,
-            host: "chat.wotgonline.com",
-            protocol: "wss"
-        }
-    },
     build: {
-        outDir: "public/vite",
-        emptyOutDir: true,
-        manifest: true, // Needed for Laravel to read Vite assets
+        outDir: 'public/build', // Ensure assets go to /public/build/
+        manifest: true,
+        rollupOptions: {
+            output: {
+                entryFileNames: 'assets/[name]-[hash].js',
+                chunkFileNames: 'assets/[name]-[hash].js',
+                assetFileNames: 'assets/[name]-[hash].[ext]',
+            },
+        },
     },
 });

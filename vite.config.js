@@ -12,7 +12,7 @@ export default defineConfig({
     server: {
         host: "0.0.0.0",
         hmr: {
-            port: null, 
+            clientPort: 443,
             host: "chat.wotgonline.com",
             protocol: "wss"
         }
